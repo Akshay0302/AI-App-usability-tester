@@ -12,7 +12,8 @@ dark-mode gaps are surfaced by default, not on request.
 | `feedback_dummy.csv` | Self-created dummy dataset — 18 usability-test quotes from a fictional ride-hailing app, across 9 tasks (booking, payment, tracking, cancellation, Arabic/RTL switch, onboarding, network drop). |
 | `design_companion_prompt.md` | Both prompts in full, plus the reasoning behind each instruction. |
 | `sample_run_output.md` | Both prompts' output when run — themes/severity/fixes for the feedback tool, and per-screen findings/gaps/questions for the flow tool. |
-| `app.py` / `requirements.txt` | A Streamlit app with two tabs: **Feedback Summarizer** and **Screen & Flow Review** (upload real screenshots or describe steps as text). Both ship with a no-key "Demo mode" and a "Live mode" that calls your own OpenAI or Anthropic key, vision included. |
+| `app.py` / `requirements.txt` | A Streamlit app with two tabs: **Usability Feedback** and **Screens & Flow** (drag-and-drop upload built in — Streamlit's native file uploader — or describe steps as text). Renders as a visual dashboard: gradient stat tiles, a severity donut chart, and a bar chart of participants affected per theme (via Plotly), matching the Material-inspired look of the live artifact. Both tabs ship with a no-key "Demo mode" and a "Live mode" that calls your own OpenAI or Anthropic key, vision included. |
+| `.streamlit/config.toml` | Theme file — sets the app's palette (teal primary, soft sage background) to match the artifact. Streamlit Cloud picks this up automatically as long as it stays at this path relative to `app.py`. |
 
 **Live, working demo (no setup, no API key):** a browser version of both
 tools, published as a Claude artifact — it calls Claude directly from the
